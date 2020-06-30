@@ -17,7 +17,9 @@ func (p page) serveHTTP (w http.ResponseWriter, _ *http.Request){
 func main(){
   var p page
   err := http.ListenAndServe(":"+os.Getenv("PORT"),p)
-  if(err!=nil)panic(err)
+  if err!=nil {
+    panic(err)
+  }
 	//http.HandleFunc("/", func(w http.ResponseWriter, _ *http.Request) {
 		//strReq := html.EscapeString(r.URL.Path)
 		//fmt.Fprintf(w, "Hello, %q\n", strReq)
