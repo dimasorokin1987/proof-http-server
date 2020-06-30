@@ -10,7 +10,7 @@ import (
 )
 
 type page struct {}
-func (p page) serveHTTP (w http.ResponseWriter, _ *http.Request){
+func (p page) ServeHTTP (w http.ResponseWriter, _ *http.Request){
   fmt.Fprint(w,"<h1>hello world")
 }
 
