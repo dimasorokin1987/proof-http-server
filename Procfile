@@ -1,1 +1,1 @@
-web: proof-http-server
+web: bin/proof-http-server
